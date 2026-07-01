@@ -1,33 +1,98 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gölge Dünyası</title>
-    <style>
-        body{
-            margin:0;
-            background:#111;
-            color:white;
-            font-family:Arial,sans-serif;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            height:100vh;
-            text-align:center;
-        }
-        h1{
-            font-size:40px;
-        }
-        p{
-            color:#bbb;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gölge Dünyası</title>
+<style>
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:#07070c;
+  color:white;
+}
+header{
+  padding:20px;
+  background:#111120;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.logo{font-size:22px;font-weight:bold;}
+nav a{
+  color:#ccc;
+  text-decoration:none;
+  margin-left:12px;
+}
+.hero{
+  min-height:75vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:30px;
+  background:radial-gradient(circle,#25254a,#07070c);
+}
+h1{font-size:45px;margin-bottom:10px;}
+p{color:#cfcfe8;font-size:18px;}
+button{
+  margin-top:20px;
+  padding:14px 24px;
+  border:0;
+  border-radius:12px;
+  background:#7b2cff;
+  color:white;
+  font-size:18px;
+}
+section{padding:30px;}
+.card{
+  background:#151528;
+  padding:20px;
+  border-radius:15px;
+  margin-top:15px;
+}
+footer{
+  text-align:center;
+  padding:20px;
+  color:#888;
+}
+</style>
 </head>
 <body>
-    <div>
-        <h1>🌑 Gölge Dünyası</h1>
-        <p>İlk web sitemiz başarıyla oluşturuldu!</p>
-    </div>
+
+<header>
+  <div class="logo">🌑 Gölge Dünyası</div>
+  <nav>
+    <a href="#">Ana Sayfa</a>
+    <a href="#">Hikâye</a>
+    <a href="#">Oyun</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div>
+    <h1>Gölge Dünyası</h1>
+    <p>Karanlığın içinde doğan bir oyun evreni.</p>
+    <button>Oyuna Başla</button>
+  </div>
+</div>
+
+<section>
+  <h2>Hikâye</h2>
+  <div class="card">
+    İnsanlar gölgelerin sadece ışığın yokluğu olduğunu sanıyordu.
+    Ama bazı gölgeler yaşıyordu.
+  </div>
+
+  <h2>Yakında</h2>
+  <div class="card">
+    Karakterler, güç sistemi, harita ve ilk mini oyun eklenecek.
+  </div>
+</section>
+
+<footer>
+  © 2026 Gölge Dünyası
+</footer>
+
 </body>
 </html>
