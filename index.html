@@ -4,94 +4,193 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gölge Dünyası</title>
+
 <style>
+*{
+  box-sizing:border-box;
+}
+
 body{
   margin:0;
-  font-family:Arial,sans-serif;
-  background:#07070c;
+  font-family:Arial, sans-serif;
+  background:#05050a;
   color:white;
 }
+
 header{
-  padding:20px;
-  background:#111120;
+  position:sticky;
+  top:0;
+  background:#090914;
+  padding:16px;
   display:flex;
   justify-content:space-between;
   align-items:center;
+  border-bottom:1px solid #24243a;
 }
-.logo{font-size:22px;font-weight:bold;}
+
+.logo{
+  font-weight:bold;
+  font-size:20px;
+}
+
 nav a{
-  color:#ccc;
+  color:#cfcfff;
   text-decoration:none;
-  margin-left:12px;
+  margin-left:10px;
+  font-size:14px;
 }
+
 .hero{
-  min-height:75vh;
+  min-height:80vh;
   display:flex;
   align-items:center;
   justify-content:center;
   text-align:center;
   padding:30px;
-  background:radial-gradient(circle,#25254a,#07070c);
+  background:
+    radial-gradient(circle at center, #29295c 0%, #090914 45%, #05050a 100%);
 }
-h1{font-size:45px;margin-bottom:10px;}
-p{color:#cfcfe8;font-size:18px;}
-button{
-  margin-top:20px;
-  padding:14px 24px;
-  border:0;
-  border-radius:12px;
+
+.hero h1{
+  font-size:48px;
+  margin:0 0 12px;
+}
+
+.hero p{
+  color:#d6d6ff;
+  font-size:19px;
+  max-width:600px;
+  margin:auto;
+}
+
+.btn{
+  margin-top:24px;
+  display:inline-block;
+  padding:15px 26px;
+  border-radius:14px;
   background:#7b2cff;
   color:white;
-  font-size:18px;
+  text-decoration:none;
+  font-weight:bold;
 }
-section{padding:30px;}
+
+section{
+  padding:35px 20px;
+  max-width:1000px;
+  margin:auto;
+}
+
+h2{
+  color:#d8d1ff;
+}
+
 .card{
-  background:#151528;
+  background:#121222;
+  border:1px solid #292943;
   padding:20px;
-  border-radius:15px;
-  margin-top:15px;
+  border-radius:18px;
+  margin:15px 0;
+  line-height:1.6;
 }
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:15px;
+}
+
+.tag{
+  display:inline-block;
+  background:#202040;
+  padding:8px 12px;
+  border-radius:20px;
+  margin:5px;
+  color:#ddd;
+}
+
 footer{
   text-align:center;
-  padding:20px;
+  padding:25px;
   color:#888;
+  border-top:1px solid #24243a;
 }
 </style>
 </head>
+
 <body>
 
 <header>
   <div class="logo">🌑 Gölge Dünyası</div>
   <nav>
-    <a href="#">Ana Sayfa</a>
-    <a href="#">Hikâye</a>
-    <a href="#">Oyun</a>
+    <a href="#hikaye">Hikâye</a>
+    <a href="#dunya">Dünya</a>
+    <a href="#sistemler">Sistemler</a>
   </nav>
 </header>
 
 <div class="hero">
   <div>
     <h1>Gölge Dünyası</h1>
-    <p>Karanlığın içinde doğan bir oyun evreni.</p>
-    <button>Oyuna Başla</button>
+    <p>Karanlık seni beklemiyor. Sen karanlığa adım atıyorsun.</p>
+    <a class="btn" href="#sistemler">Oyuna Başla</a>
   </div>
 </div>
 
-<section>
-  <h2>Hikâye</h2>
+<section id="hikaye">
+  <h2>📖 Hikâye</h2>
   <div class="card">
-    İnsanlar gölgelerin sadece ışığın yokluğu olduğunu sanıyordu.
-    Ama bazı gölgeler yaşıyordu.
+    Bir gün ışık yok oldu. Eski dünya çöktü. Canlıların çoğu karanlıkta yok olurken,
+    bazı varlıklar bu yeni dünyaya uyum sağladı. Onlar gözleriyle değil, her şeyin özünü görüyordu.
+    İnsanlık ise bu dünyanın en zayıf canlılarından biri olarak küçük yerleşimlerde hayatta kalmaya çalıştı.
+  </div>
+  <div class="card">
+    Sen, güvenli bölgenin dışına çıkmaya karar veren sıradan bir insansın.
+    Kimse seni seçmedi. Kimse sana kader vermedi. Yolculuğun sadece merakla başladı.
+  </div>
+</section>
+
+<section id="dunya">
+  <h2>🌍 Dünya</h2>
+  <div class="grid">
+    <div class="card">🏘️ İnsan Yerleşimi<br>Başlangıç ve güvenli bölge.</div>
+    <div class="card">🌲 Fısıldayan Orman<br>Geceleri daha tehlikeli olur.</div>
+    <div class="card">☠️ Ölü Bataklık<br>Sis ve zehir her adımı riskli yapar.</div>
+    <div class="card">❄️ Sonsuz Karlar<br>Soğuk, en az canavarlar kadar tehlikelidir.</div>
+    <div class="card">🌋 Küller Vadisi<br>Lavlar ve ateş yaratıklarıyla doludur.</div>
+    <div class="card">🌑 Gölgenin Kalbi<br>Dünyanın en büyük sırrı burada saklıdır.</div>
+  </div>
+</section>
+
+<section id="sistemler">
+  <h2>⚔️ Temel Sistemler</h2>
+  <div>
+    <span class="tag">Açık Dünya</span>
+    <span class="tag">Hayatta Kalma</span>
+    <span class="tag">Silah + Yetenek</span>
+    <span class="tag">Rastgele Canavar Yetenekleri</span>
+    <span class="tag">Ölünce Sıfırlanma</span>
+    <span class="tag">%1 Gölge Parçası</span>
+    <span class="tag">Bölge Kuralları</span>
   </div>
 
-  <h2>Yakında</h2>
   <div class="card">
-    Karakterler, güç sistemi, harita ve ilk mini oyun eklenecek.
+    Oyuncu ölürse dünya sıfırlanır. Eşyalar, seviye ve ilerleme gider.
+    Ancak çok nadir olarak, %1 ihtimalle bilinmeyen bir parça elde edebilir.
+    Bu parçanın gerçek amacı şimdilik bilinmiyor.
+  </div>
+</section>
+
+<section>
+  <h2>📜 Geliştirici Günlüğü</h2>
+  <div class="card">
+    <strong>01.07.2026 - v0.1 Doğuş</strong><br>
+    Gölge Dünyası resmi olarak başladı. Hikâye, dünya, ölüm sistemi,
+    canavar yetenekleri ve temel savaş fikri oluşturuldu.
   </div>
 </section>
 
 <footer>
-  © 2026 Gölge Dünyası
+  © 2026 Gölge Dünyası | Geliştirme sürümü v0.1
 </footer>
 
 </body>
